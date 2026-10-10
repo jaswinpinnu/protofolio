@@ -4,3 +4,63 @@
 .education-list{display:grid;gap:12px}
 .education-card{transition:transform .25s,border-color .25s}
 .education-card:hover{transform:translateY(-2px);border-color:rgba(167,139,250,.32)}
+/* Internship Experience Section */
+#experience {
+  padding: 80px 0;
+}
+
+#experience .container {
+  width: min(100% - 40px, 1220px);
+  margin: 0 auto;
+}
+
+#experience .section-title {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+#experience .education-list {
+  display: grid;
+  gap: 16px;
+}
+
+#experience .education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+  border: 1px solid #252938;
+  border-radius: 16px;
+  background: #10121c;
+}
+
+#experience .education-main h3 {
+  margin-bottom: 10px;
+}
+
+#experience .education-school {
+  margin-bottom: 8px;
+}
+
+#experience .education-details {
+  margin-top: 0;
+}
+
+#experience .education-year {
+  white-space: nowrap;
+  color: #55e6f2;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  #experience .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  #experience .education-year {
+    white-space: normal;
+  }
+}
