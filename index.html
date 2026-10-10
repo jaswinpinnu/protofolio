@@ -41,9 +41,17 @@
         <div class="profile-card">
           <div class="card-top"><span class="window-dots"><i></i><i></i><i></i></span><span class="card-label">PROFILE.EXE</span></div>
           <div class="profile-frame">
-            <img src="assets/profile.jpg" alt="Portrait of Jaswin" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="profile-fallback" aria-label="Profile photo placeholder"><span>J</span><small>YOUR PHOTO</small></div>
-          </div>
+  <img
+    src="./assets/profile.jpg"
+    alt="Portrait of Jaswin"
+    class="profile-photo"
+    onerror="console.error('Profile image failed:', this.src); this.style.display='none'; this.nextElementSibling.style.display='grid';"
+  >
+  <div class="profile-fallback" aria-label="Profile photo placeholder">
+    <span>J</span>
+    <small>YOUR PHOTO</small>
+  </div>
+</div>
           <div class="profile-caption"><div><strong>Jaswin</strong><span>Full Stack Developer Intern</span></div><span class="verified-mark">✳</span></div>
           <div class="code-line"><span class="code-purple">const</span> passion = <span class="code-green">"building"</span>;</div>
         </div>
