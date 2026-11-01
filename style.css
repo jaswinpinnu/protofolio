@@ -650,3 +650,294 @@
     min-height: 300px !important;
   }
 }
+
+
+/* =========================================================
+   FINAL RESPONSIVE REFINEMENTS
+   Append after all existing portfolio styles
+========================================================= */
+
+/* Prevent long content and decorative elements from causing page overflow. */
+img, video, iframe, svg {
+  max-width: 100%;
+}
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  min-width: 320px;
+}
+.section-wrap,
+.site-header,
+#experience .container {
+  min-width: 0;
+}
+.hero-copy,
+.hero-visual,
+.about-copy,
+.about-stats,
+.skill-card,
+.project-card,
+.project-info,
+.education-main,
+.contact-panel {
+  min-width: 0;
+}
+.project-info h3,
+.education-main h3,
+.hero h2 {
+  overflow-wrap: anywhere;
+}
+
+/* Tablet landscape and compact laptops. */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .85fr);
+  }
+  .hero h1 {
+    font-size: clamp(54px, 7vw, 76px);
+    letter-spacing: -4px;
+  }
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 28px;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Phones and portrait tablets. */
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+  .section-wrap,
+  .site-header {
+    width: calc(100% - 32px);
+  }
+  .site-header {
+    height: 68px;
+  }
+  .nav-links {
+    z-index: 20;
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+  }
+  .nav-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .menu-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 28px 0 58px !important;
+    gap: 8px !important;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 12vw, 72px);
+    line-height: 1;
+    letter-spacing: -3.5px;
+  }
+  .hero h2 {
+    font-size: clamp(21px, 5.8vw, 27px);
+  }
+  .hero-description {
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-actions .button {
+    justify-content: center;
+    min-height: 44px;
+    padding-inline: 10px;
+  }
+  .hero-meta {
+    gap: 10px 16px;
+  }
+  .hero-visual {
+    width: 100%;
+    min-height: 300px !important;
+    margin: 8px 0 0 !important;
+    overflow: hidden;
+  }
+  .profile-card {
+    width: min(245px, 72%);
+  }
+  .profile-frame {
+    height: 215px;
+  }
+  .orbit-a {
+    width: min(290px, 85vw);
+  }
+  .orbit-b {
+    width: min(330px, 94vw);
+  }
+  .float-chip {
+    max-width: 42%;
+    padding: 8px;
+    font-size: 8px;
+  }
+  .chip-top {
+    top: 28px;
+    right: 2px;
+  }
+  .chip-bottom {
+    bottom: 22px;
+    left: 2px;
+  }
+  .scroll-cue {
+    bottom: 8px;
+  }
+  .section-block {
+    padding-top: 52px;
+    padding-bottom: 26px;
+  }
+  .section-heading {
+    margin-bottom: 24px;
+  }
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+  .about-stats,
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stat-card,
+  .skill-card {
+    min-width: 0;
+  }
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project-art {
+    height: clamp(185px, 58vw, 230px);
+  }
+  .education-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px;
+  }
+  .education-main {
+    flex: 1 1 calc(100% - 58px);
+  }
+  .education-year {
+    flex: 1 1 100%;
+    white-space: normal;
+    margin-left: 54px;
+  }
+  #experience {
+    padding: 52px 0;
+  }
+  #experience .container {
+    width: calc(100% - 32px);
+  }
+  #experience .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+  }
+  #experience .education-year {
+    margin-left: 0;
+  }
+  .contact-section {
+    padding: 58px 0 46px;
+  }
+  .contact-panel {
+    padding: 34px 22px;
+  }
+  .site-footer {
+    align-items: flex-start;
+  }
+  .site-footer p {
+    flex-basis: 100%;
+    order: 3;
+  }
+  .social-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Narrow phones. */
+@media (max-width: 400px) {
+  .section-wrap,
+  .site-header,
+  #experience .container {
+    width: calc(100% - 28px);
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(44px, 13vw, 58px);
+    letter-spacing: -2.8px;
+  }
+  .hero-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-actions .button {
+    width: 100%;
+  }
+  .about-stats,
+  .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .stat-card {
+    min-height: 0;
+  }
+  .skill-card p {
+    min-height: 0;
+  }
+  .project-art {
+    height: 190px;
+  }
+  .contact-panel {
+    padding: 28px 17px;
+  }
+  .social-links {
+    gap: 10px;
+    font-size: 9px;
+  }
+}
+
+/* Landscape phones: keep the hero from becoming excessively tall. */
+@media (max-width: 760px) and (orientation: landscape) {
+  .hero {
+    padding-top: 24px !important;
+  }
+  .hero-visual {
+    min-height: 260px !important;
+  }
+}
+
+/* Respect device accessibility settings. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
