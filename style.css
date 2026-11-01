@@ -579,3 +579,74 @@
   }
 }
 
+/* FIX: Remove extra mobile spacing */
+@media (max-width: 640px) {
+
+  /* Reduce space below navbar */
+  .hero {
+    padding-top: 25px !important;
+    padding-bottom: 65px !important;
+    gap: 0 !important;
+    min-height: auto;
+  }
+
+  /* Reduce spacing around introduction */
+  .hello {
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+
+  .hero h1 {
+    margin-top: 2px;
+    margin-bottom: 12px;
+  }
+
+  .hero-description {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  /* Keep buttons compact */
+  .hero-actions {
+    gap: 9px;
+  }
+
+  .button {
+    padding: 11px 14px;
+  }
+
+  /* Reduce gap before profile card */
+  .hero-visual {
+    min-height: 320px !important;
+    margin-top: 0 !important;
+  }
+
+  .profile-card {
+    width: min(245px, 75%);
+  }
+
+  .profile-frame {
+    height: 220px;
+  }
+
+  /* Reduce unnecessary bottom space */
+  .scroll-cue {
+    bottom: 12px;
+  }
+
+  .section-block {
+    padding-top: 50px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .hero {
+    padding-top: 20px !important;
+    padding-bottom: 55px !important;
+  }
+
+  .hero-visual {
+    min-height: 300px !important;
+  }
+}
